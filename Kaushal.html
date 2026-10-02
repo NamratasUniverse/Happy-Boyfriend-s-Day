@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Boyfriend's Day 💗</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        min-height: 100vh;
+        overflow: hidden;
+        font-family: Georgia, serif;
+
+        background:
+            radial-gradient(circle at 20% 20%, rgba(255, 80, 160, 0.25), transparent 30%),
+            radial-gradient(circle at 80% 80%, rgba(160, 70, 255, 0.25), transparent 30%),
+            linear-gradient(135deg, #120018, #3b093c, #76144f);
+
+        color: white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+    }
+
+
+    /* ---------- MAIN CONTENT ---------- */
+
+    .container {
+    width: 90%;
+    max-width: 850px;
+    min-height: 82vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+    /* ---------- TOP TEXT ---------- */
+
+    .top-text {
+        font-family: "Trebuchet MS", sans-serif;
+
+        font-size: 1rem;
+        letter-spacing: 5px;
+
+        color: #ffd6ed;
+
+        margin-bottom: 32px;
+
+        text-transform: uppercase;
+
+        animation: fadeDown 1.5s ease;
+    }
+
+
+    /* ---------- QUOTE ---------- */
+
+    .quote-box {
+        width: 85%;
+        min-height: 240px;
+
+        padding: 50px 40px;
+
+        border: 1px solid rgba(255,255,255,0.3);
+
+        border-radius: 28px;
+
+        background: rgba(255,255,255,0.09);
+
+        backdrop-filter: blur(15px);
+
+        box-shadow:
+            0 0 30px rgba(255, 80, 160, 0.2),
+            inset 0 0 25px rgba(255,255,255,0.04);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+
+        animation: appear 1.8s ease;
+    }
+
+
+    .quote {
+    font-size: clamp(1rem, 2.3vw, 1.7rem);
+    line-height: 1.5;
+    color: #fff7fc;
+    font-style: italic;
+    max-width: 650px;
+
+    position: relative;
+    z-index: 2;
+}
+
+    /* Decorative quotation marks */
+
+    .quote::before {
+        content: "“";
+
+        position: absolute;
+
+        left: -35px;
+        top: -45px;
+
+        font-size: 5rem;
+
+        color: #ff8fc7;
+
+        opacity: 0.65;
+    }
+
+    .quote::after {
+        content: "”";
+
+        position: absolute;
+
+        right: -35px;
+        bottom: -65px;
+
+        font-size: 5rem;
+
+        color: #ff8fc7;
+
+        opacity: 0.65;
+    }
+
+
+    /* ---------- BOTTOM GREETING ---------- */
+
+    .bottom {
+        margin-top: 55px;
+
+        font-family: "Trebuchet MS", sans-serif;
+
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+
+        font-weight: bold;
+
+        color: white;
+
+        animation:
+            gentleFloat 2.5s ease-in-out infinite,
+            glowingText 2s ease-in-out infinite alternate;
+    }
+
+
+    /* Floating motion */
+
+    @keyframes gentleFloat {
+
+        0%, 100% {
+            transform: translateY(0);
+        }
+
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+
+    /* Glowing effect */
+
+    @keyframes glowingText {
+
+        from {
+            text-shadow:
+                0 0 8px #ff65ad,
+                0 0 15px rgba(255, 101, 173, 0.4);
+        }
+
+        to {
+            text-shadow:
+                0 0 18px #ff8fc7,
+                0 0 30px rgba(255, 101, 173, 0.7);
+        }
+    }
+
+
+    /* ---------- FLOATING HEARTS ---------- */
+
+    .heart {
+        position: absolute;
+
+        color: #ff8fc7;
+
+        font-size: 25px;
+
+        animation: floatHeart 7s linear infinite;
+
+        opacity: 0;
+
+        z-index: 1;
+    }
+
+
+    @keyframes floatHeart {
+
+        0% {
+            transform:
+                translateY(110vh)
+                rotate(0deg)
+                scale(0.7);
+
+            opacity: 0;
+        }
+
+        10% {
+            opacity: 0.8;
+        }
+
+        50% {
+            transform:
+                translateY(50vh)
+                rotate(180deg)
+                scale(1);
+        }
+
+        90% {
+            opacity: 0.8;
+        }
+
+        100% {
+            transform:
+                translateY(-120px)
+                rotate(360deg)
+                scale(0.7);
+
+            opacity: 0;
+        }
+    }
+
+
+    /* Different heart positions */
+
+    .heart:nth-child(1) {
+        left: 5%;
+        animation-delay: 0s;
+    }
+
+    .heart:nth-child(2) {
+        left: 18%;
+        animation-delay: 2s;
+        font-size: 18px;
+    }
+
+    .heart:nth-child(3) {
+        left: 34%;
+        animation-delay: 4s;
+        font-size: 30px;
+    }
+
+    .heart:nth-child(4) {
+        left: 52%;
+        animation-delay: 1s;
+        font-size: 20px;
+    }
+
+    .heart:nth-child(5) {
+        left: 70%;
+        animation-delay: 3s;
+        font-size: 28px;
+    }
+
+    .heart:nth-child(6) {
+        left: 88%;
+        animation-delay: 5s;
+        font-size: 18px;
+    }
+
+
+    /* ---------- SPARKLES ---------- */
+
+    .sparkle {
+        position: absolute;
+
+        color: #ffe5f3;
+
+        font-size: 20px;
+
+        animation:
+            sparkleAnimation 2s ease-in-out infinite alternate;
+
+        z-index: 1;
+    }
+
+
+    @keyframes sparkleAnimation {
+
+        from {
+            opacity: 0.2;
+            transform: scale(0.6) rotate(0deg);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1.2) rotate(20deg);
+        }
+    }
+
+
+    .s1 {
+        top: 14%;
+        left: 14%;
+    }
+
+    .s2 {
+        top: 23%;
+        right: 15%;
+        animation-delay: .5s;
+    }
+
+    .s3 {
+        bottom: 24%;
+        left: 12%;
+        animation-delay: 1s;
+    }
+
+    .s4 {
+        bottom: 17%;
+        right: 12%;
+        animation-delay: 1.5s;
+    }
+
+
+    /* ---------- ENTRY ANIMATIONS ---------- */
+
+    @keyframes appear {
+
+        from {
+            opacity: 0;
+            transform: scale(0.92) translateY(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: scale(1) translateY(0);
+        }
+    }
+
+
+    @keyframes fadeDown {
+
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 600px) {
+
+        .container {
+            width: 94%;
+        }
+
+        .top-text {
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            margin-bottom: 25px;
+        }
+
+        .quote-box {
+            width: 96%;
+            min-height: 230px;
+            padding: 40px 25px;
+        }
+
+        .quote {
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+
+        .quote::before {
+            left: -20px;
+            top: -30px;
+            font-size: 3.5rem;
+        }
+
+        .quote::after {
+            right: -20px;
+            bottom: -45px;
+            font-size: 3.5rem;
+        }
+
+        .bottom {
+            margin-top: 40px;
+            font-size: 1.55rem;
+        }
+    }
+
+</style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         FLOATING HEARTS
+    ========================== -->
+
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+    <div class="heart">♥</div>
+    <div class="heart">♡</div>
+
+
+    <!-- =========================
+         SPARKLES
+    ========================== -->
+
+    <div class="sparkle s1">✦</div>
+    <div class="sparkle s2">✧</div>
+    <div class="sparkle s3">✦</div>
+    <div class="sparkle s4">✧</div>
+
+
+    <!-- =========================
+         MAIN PAGE
+    ========================== -->
+
+    <main class="container">
+
+        <div class="top-text">
+            A Little Message For You ✨
+        </div>
+
+
+        <!--
+        ============================================
+        CHANGE ONLY THE TEXT BELOW TO YOUR QUOTE
+        ============================================
+        -->
+
+        <div class="quote-box">
+
+            <div class="quote">
+                THANKYOU FOR BEING THE BEST BOYFRIEND KAUSHAL 
+                <br><br>
+                Tumhare saath har moment special haiii 
+                Even the slightest of things 
+                Even a random thing, even a random place becomes a memory.....
+                U are everywhere 
+                U are my life ........🫶🏻🫶🏻
+                
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             FINAL GREETING
+        ========================== -->
+
+        <div class="bottom">
+
+            Happy Boyfriend's Day Kaushal ❤️
+
+        </div>
+
+    </main>
+
+
+</body>
+</html>
